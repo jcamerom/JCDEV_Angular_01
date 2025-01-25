@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Mi primer proyecto';
+  public counter: number = 5;
+
+  constructor() {
+    console.log('El componente AppComponent ha sido creado');
+  }
+
+  increaseBy(value: number): void {
+    this.counter += value;
+  }
+
+  reset(): void {
+    this.counter = 5;
+  }
 }

@@ -1,0 +1,25 @@
+<h1>Uso del componente Heroes/List</h1>
+<br>
+<h2>Listado de Heroes</h2>
+<br>
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroNames" class="list-group-item">
+    <strong>{{ name }}</strong>
+  </li>
+</ul>
+<br>
+<button
+  *ngIf="heroNames.length > 0"
+  class="btn btn-outline-danger"
+  (click)="removeLastHero()"
+>
+  Borrar último héroe
+</button>
+<br>
+<br>
+<div *ngIf="delectedHero; else nothingWasDelected">
+  <h3>Heroe borrado: <small class="text-danger"> {{ delectedHero }} </small></h3>
+</div>
+<ng-template #nothingWasDelected>
+  <h3>No ha borrado nada.</h3>
+</ng-template>
