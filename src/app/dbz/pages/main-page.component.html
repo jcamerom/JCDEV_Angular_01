@@ -1,0 +1,17 @@
+<h1>DBZ Personajes</h1>
+<h3>Ejercicio con módulos avanzado</h3>
+<br>
+
+<div class="row">
+  <div class="col">
+
+    <app-list-dbz [characterList]="characters"
+                  (onDelete)="onDeleteCharacter($event)"></app-list-dbz>
+  </div>
+  <div class="col">
+    <app-add-character-dbz (onNewCharacter)="onNewCharacter($event)"></app-add-character-dbz>
+  </div>
+
+</div>
+<br><br><br>
+
